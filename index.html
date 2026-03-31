@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>North Star Dental Assist</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #F5F7FA;
+    }
+
+    .header {
+      background: #17315C;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .header h1 {
+      margin: 10px 0 5px;
+    }
+
+    .card {
+      max-width: 550px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 14px;
+      background: #17315C;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff8eb;
+      border: 1px solid #C89B2D;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>North Star Dental Assist</h1>
+  <p>AI-powered equipment triage</p>
+</div>
+
+<div class="card">
+  <h2>What’s happening?</h2>
+
+  <textarea id="input" rows="5" placeholder="Describe the issue..."></textarea>
+
+  <button onclick="run()">Run Triage</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+function run() {
+  const text = document.getElementById("input").value;
+
+  if (!text) return;
+
+  document.getElementById("result").innerHTML =
+    '<div class="result"><strong>Result:</strong><br>Likely a simple issue. Check water, power, and connections first. If the issue continues, call North Star.</div>';
+}
+</script>
+
+</body>
+</html>
